@@ -158,3 +158,12 @@ clusterGroup:
 #          operator: In
 #          values:
 #            - OpenShift
+
+secrets:
+  - name: config-demo
+    vaultPrefixes:
+    - global
+    fields:
+    - name: secret
+      onMissingValue: generate
+      vaultPolicy: validatedPatternDefaultPolicy
